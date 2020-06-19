@@ -865,8 +865,10 @@
                   <div class="x-column x-sm x-1-1" style="padding: 0px;">
                     <div class="x-video embed">
                       <div class="x-video-inner">
-                        <script language="javascript" type="text/javascript"
-                          src="https://yourstreamlive.com/embed/live/161?&#038;responsive=yes&#038;aspect_ratio=16:9"></script>
+                        <STYLE TYPE-"type/css">.embed-container iframe,.embed-container object,.embed-container embed {position: absolute;top: 0;left: 0;width: 100%;height: 100%; } </STYLE>
+                        <div class="embed-container">
+                          <iframe frameborder="0"  src="https://yourstreamlive.com/embed/iframe/live/161?&responsive=yes&aspect_ratio=16:9" marginheight="0" marginwidth="0" scrolling="auto" allowfullscreen="yes" allowtransparency="yes" allow="autoplay"  name="live" id="live"></iframe>
+                        </div>
                       </div>
                     </div>
                     <a class="x-btn x-btn-global" href="https://www.newtownbredabaptist.com/give/" data-options="thumbnail: ''">Give</a>
@@ -908,34 +910,6 @@
       </footer>
 
     </div> <!-- END .x-site -->
-    <script>
-      jQuery(document).ready(function ($) {
-
-        var $window = $(window);
-        var body = $('body');
-        var bodyOffsetBottom = $window.scrollBottom();             // 1
-        var bodyHeightAdjustment = body.height() - bodyOffsetBottom;     // 2
-        var bodyHeightAdjusted = body.height() - bodyHeightAdjustment; // 3
-        var $scrollTopAnchor = $('.x-scroll-top');
-
-        function sizingUpdate() {
-          var bodyOffsetTop = $window.scrollTop();
-          if (bodyOffsetTop > (bodyHeightAdjusted * 0.75)) {
-            $scrollTopAnchor.addClass('in');
-          } else {
-            $scrollTopAnchor.removeClass('in');
-          }
-        }
-
-        $window.on('scroll', sizingUpdate).resize(sizingUpdate);
-        sizingUpdate();
-
-        $scrollTopAnchor.on('click', function () {
-          $('html, body').animate({ scrollTop: 0 }, 850, 'xEaseInOutExpo');
-          return false;
-        });
-      });
-    </script>
   </div> <!-- END .x-root -->
 </body>
 </html>
